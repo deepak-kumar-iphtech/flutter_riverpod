@@ -11,7 +11,7 @@ class MyHomePage extends StatelessWidget {
       final name = ref.watch(nameProvider);
       return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.blueGrey,
         ),
         body: Column(
           children: [

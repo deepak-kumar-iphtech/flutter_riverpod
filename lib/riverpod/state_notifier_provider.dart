@@ -33,9 +33,9 @@ class RiverpodStateNotifierProvider extends ConsumerWidget {
               onSubmitted: (value) => onSubmitAge(ref, value),
               decoration: const InputDecoration(labelText: 'Enter Age'),
             ),
-            Center(
-              child: Text(user.age.toString()),
-            ),
+            // Center(
+            //   child: Text(user.age.toString()),
+            // ),
           ],
         ),
       ),

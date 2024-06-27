@@ -2,29 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class RiverpodFutureProvider extends ConsumerWidget {
-  const RiverpodFutureProvider({super.key});
+class RiverpodStreamProvider extends ConsumerWidget {
+  const RiverpodStreamProvider({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-      ),
-      body: ref.watch(futureProvider).when(
+      appBar: AppBar(backgroundColor: Colors.blueGrey),
+      body: ref.watch(streamProvider).when(
         data: (data) {
           return Center(
-            child: Column(
-              children: [
-                Text(data.name),
-                Text(data.email),
-              ],
-            ),
+            child: Text(data.toString()),
           );
         },
         error: (error, stackTrace) {
           return Center(
-            child: Text(error.toString()),
+            child: Text(
+              error.toString(),
+            ),
           );
         },
         loading: () {
